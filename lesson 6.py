@@ -1,12 +1,3 @@
-CHECKS = [
-    get_long_or_short_password,
-    get_whether_there_are_numbers_or_not,
-    has_upper_letters,
-    has_lower_letters,
-    has_symbols
-]
-
-
 def get_long_or_short_password(password):
     return len(password) >= 12
 
@@ -29,11 +20,18 @@ def has_symbols(password):
 
 
 def password_rating(password):
+    CHECKS = [
+        get_long_or_short_password,
+        get_whether_there_are_numbers_or_not,
+        has_upper_letters,
+        has_lower_letters,
+        has_symbols
+    ]
     score = 0
     for check in CHECKS:
-        if check(password):
+        if check (password):
             score += 2
-    return (score)
+    return score
 
 
 def main():
