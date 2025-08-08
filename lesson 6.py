@@ -29,7 +29,7 @@ def password_rating(password):
     ]
     score = 0
     for check in CHECKS:
-        if check (password):
+        if check(password):
             score += 2
     return score
 
@@ -41,3 +41,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
