@@ -20,7 +20,7 @@ def has_symbols(password):
 
 
 def password_rating(password):
-    CHECKS = [
+    checks = [
         get_long_or_short_password,
         get_whether_there_are_numbers_or_not,
         has_upper_letters,
@@ -28,7 +28,7 @@ def password_rating(password):
         has_symbols
     ]
     score = 0
-    for check in CHECKS:
+    for check in checks:
         if check(password):
             score += 2
     return score
@@ -41,4 +41,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
